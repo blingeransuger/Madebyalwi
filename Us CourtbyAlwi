@@ -1,0 +1,54 @@
+game:GetService("ReplicatedStorage").AnalyticsHandler_questStartedServerEvent:FireServer()
+for i = 1, 8 do
+local args = {
+    [1] = {
+        ["Id"] = "StyleHunter",
+        ["Title"] = "Style Hunter",
+        ["Objectives"] = {
+            [1] = {
+                ["Id"] = "Objective1",
+                ["Description"] = "Ball Boy at the Shop",
+                ["MaxValue"] = 1
+            },
+            [2] = {
+                ["Id"] = "Objective2",
+                ["Description"] = "Ball Boy at the Locker Room",
+                ["MaxValue"] = 1
+            },
+            [3] = {
+                ["Id"] = "Objective3",
+                ["Description"] = "Ball Girl at the Vine Garden",
+                ["MaxValue"] = 1
+            },
+            [4] = {
+                ["Id"] = "Objective4",
+                ["Description"] = "Ball Girl at the Althea Gibson Statue",
+                ["MaxValue"] = 1
+            },
+            [5] = {
+                ["Id"] = "Objective5",
+                ["Description"] = "Ball Boy at the Arena Main Court",
+                ["MaxValue"] = 1
+            },
+            [6] = {
+                ["Id"] = "Objective6",
+                ["Description"] = "Ball Girl at the Locker Room",
+                ["MaxValue"] = 1
+            },
+            [7] = {
+                ["Id"] = "Objective7",
+                ["Description"] = "Ball Boy at the Flags",
+                ["MaxValue"] = 1
+            },
+            [8] = {
+                ["Id"] = "Objective8",
+                ["Description"] = "Ball Girl at the Arthur Ashe Statue",
+                ["MaxValue"] = 1
+            }
+        }
+    },
+    [2] = {}
+}
+args[2] = args[1].Objectives[i]
+game:GetService("ReplicatedStorage").RLStyleHunter_ProgressObjectiveServerFunc:InvokeServer(unpack(args))
+end
